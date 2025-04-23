@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="fontawesone/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>todo list</title>
+</head>
+<body class="bg-gray-200 h-auto">
+    <main class="h-screen flex justify-center items-center">
+        <article class="border-2 w-[95%] sm:w-[50%] h-auto p-5 text-center sm:border-2 bg-white mx-4 shadow-xl/30 rounded-lg">
+            <h1 class="text-3xl font-bold pb-6">Ma Todo List</h1>
+            <section class="flex flex-col justify-center items-center sm:flex-row sm:gap-5 gap-3">
+                <input type="text" name="Task" id="Task" placeholder="Ajouter une tache........ " class="p-3 rounded-lg w-[300px] sm:w-[400px]  focus:ring-blue-300 focus:ring-2 border border-gray-300 outline-none" >
+                <button class="bg-blue-500 sm:hover:bg-blue-600 w-[100px] sm:w-[200px] text-white p-3 rounded-lg focus:ring-4 focus:ring-blue-300" id="myBtn"><i class="fa-solid fa-plus"></i></button>
+            </section>  
+            <div id="taskContainer" class="border-2 border-gray-200 min-h-[50vh] h-auto mt-8">
+            </div>
+        </article>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
