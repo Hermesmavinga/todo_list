@@ -29,6 +29,27 @@ myBtn.addEventListener('click', () => {
 
 
 
+  const htmlEl   = document.documentElement;
+  const toggle   = document.getElementById('theme-toggle');
+  const icon     = document.getElementById('theme-icon');
+
+  // Applique la préférence stockée ou thème système
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' ||
+      (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    htmlEl.classList.add('dark');
+    icon.classList.replace('fa-sun', 'fa-moon');
+  }
+
+  toggle.addEventListener('click', () => {
+    const dark = htmlEl.classList.toggle('dark');
+    icon.classList.replace(dark ? 'fa-sun' : 'fa-moon', dark ? 'fa-moon' : 'fa-sun');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  });
+
+
+
+
 
 
 
